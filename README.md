@@ -13,6 +13,11 @@ This project serves to satisfy the requirements for the development challenge fo
 1. Setup development environment
 2. Build deployable pacakge: run `yarn build`
 3. Test build by serving the new `build/` directory: run `serve -s build` or `npx http-server build`
+4. Deploy wherever desired, just needs a web server to respond to requests
+
+## Tests
+
+To run the tests for the Steps API call, run `yarn test`. Both the functionality and the tests are in the `/src/services/` directory.
 
 
 
