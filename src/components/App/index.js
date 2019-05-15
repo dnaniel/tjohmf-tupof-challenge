@@ -21,6 +21,7 @@ function App() {
               What’s the best way to shop for the latest video games and peripherals? 
               How about never shopping at all? You’ll get new stuff on your doorstep &mdash; every month.
             </p>
+            <button>Get Started</button>
           </div>
         </div>
         <Steps />

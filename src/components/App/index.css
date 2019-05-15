@@ -25,23 +25,53 @@ main {
 
 #couch {
   background-color: #777;
-  background-image: url('../../assets/photo-couch_2x.jpg');
+  background-image: url('../../assets/photo-couch.jpg');
   background-size: cover;
+  background-position: center center;
   color: #ffffff;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-top: 30vh;
-  padding-bottom: 20vh;
+  padding-bottom: 10vh;
 }
 
 #couch h2 {
-  font-weight: 400;
   font-size: 1.4rem;
+  font-weight: 400;
 }
 
 #couch span {
   font-weight: 300;
   font-size: 3rem;
+}
+
+@media (max-width: 600px){
+  #couch {
+    padding-top: 7vh;
+    padding-bottom: 5vh;
+  }
+
+  #couch h2 {
+    font-size: 1.2rem;
+  }
+  #couch span {
+    font-size: 2rem;
+  }
+}
+
+
+/* Change image background based on device */
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min--moz-device-pixel-ratio: 2),
+(-moz-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) { 
+  #couch {
+    background-image: url('../../assets/photo-couch_2x.jpg');
+  }  
 }

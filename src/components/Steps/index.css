@@ -1,3 +1,13 @@
+#steps-container {
+  color: #2f3237;
+  text-align: center;
+  padding: 1rem 0 3rem;
+}
+
+#steps-container h2 {
+  font-weight: 300;
+}
+
 #steps {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -17,5 +27,18 @@
 }
 
 .step {
-  
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.step .bigNumber {
+  font-size: 3rem;
+  border-bottom: 3px solid #50e3c2;
+}
+
+.step h3 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 0;
 }

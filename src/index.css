@@ -23,19 +23,44 @@ body {
 }
 
 @media (max-width: 2040px) {
-  .content-container {
-    width: 1600px;
-  }
+  .content-container { width: 1600px; }
 }
 
+@media (max-width: 1640px) {
+  .content-container { width: 1000px; }
+  html { font-size: 18px; }
+}
 @media (max-width: 1040px) {
-  .content-container {
-    width: 96%;
-  }
+  .content-container { width: 96%; }
 }
 
 
 /* Global Type */
+h2 {
+  font-size: 1.9rem;
+}
+
 p {
-  max-width: 500px;
+  max-width: 540px;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+button {
+  background-color: #50e3c2;
+  padding: 0 1.3rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-radius: 1rem;
+  box-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+button:hover, button:focus, button:active {
+  background-color: #b7dfd6;
 }

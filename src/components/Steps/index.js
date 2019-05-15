@@ -25,12 +25,15 @@ class Steps extends React.Component {
   render() {
     const {steps} = this.state;
     return (
-      <div id="steps" className="content-container">
-        {steps.map((obj) => {
-          return (
-            <Step key={obj.stepNumber} step={obj} />
-          );
-        })}
+      <div id="steps-container" className="content-container">
+        <h2>How It Works</h2>
+        <div id="steps">
+          {steps.map((obj) => {
+            return (
+              <Step key={obj.stepNumber} step={obj} />
+            );
+          })}
+        </div>
       </div>
     );
   }
