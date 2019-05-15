@@ -15,7 +15,6 @@ class Steps extends React.Component {
   async componentDidMount() {
     try {
       const data = await fetchSteps();
-      console.log(data)
       this.setState({ steps: data });
     } catch(err) {
       this.setState({ errorStatus: err.message });
