@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 import Steps from '../Steps';
 
 import logo from '../../assets/logo-endless.svg';

@@ -1,0 +1,21 @@
+#steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem; 
+}
+
+@media (max-width: 1000px) {
+  #steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  #steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  
+}
