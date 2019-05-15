@@ -1,5 +1,6 @@
 export const fetchSteps = async () => {
   const response = await fetch('https://uqnzta2geb.execute-api.us-east-1.amazonaws.com/default/FrontEndCodeChallenge');
+  
   if(response.status >= 400) {
     throw(new Error('Error fetching steps'));
   } else {
@@ -7,8 +8,8 @@ export const fetchSteps = async () => {
     let jsonResponse = await response.json();
 
     jsonResponse.forEach((obj) => {
-      obj.versionContent.sort((a,b) => {
-        return new Date(a.effectiveDate) < new Date(b.effectiveDate);
+      obj.versionContent.sort((a,b) => { // get latest effective content
+        return new Date(b.effectiveDate) - new Date(a.effectiveDate);
       })
 
       let filteredObject = {
@@ -20,7 +21,7 @@ export const fetchSteps = async () => {
       filteredArray.push(filteredObject);
     });
 
-    filteredArray.sort((a,b) => {
+    filteredArray.sort((a,b) => { // sort by stepNumber
       return a.stepNumber - b.stepNumber;
     });
 

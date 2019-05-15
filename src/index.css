@@ -58,7 +58,7 @@ button {
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 400ms;
+  transition: 300ms;
 }
 
 button:hover, button:focus, button:active {

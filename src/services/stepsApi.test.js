@@ -1,7 +1,7 @@
 import { fetchSteps } from './stepsApi'
 
 describe('fetchSteps', () => {
-  it('returns an object if status code is ok', () => {
+  it('returns an empty array if status code is ok', () => {
     window.fetch = jest.fn().mockImplementation(() => ({
       status: 200,
       json: () => new Promise((resolve, reject) => {
@@ -17,23 +17,23 @@ describe('fetchSteps', () => {
       json: () => new Promise((resolve, reject) => {
         resolve([
           {
-            "id": "d11b10ba-1cd8-48f8-93eb-454b716fd5a0",
-            "stepNumber": "2",
+            "id": "422e6b50-9c5a-43d5-90cb-839f4678cb75",
+            "stepNumber": "3",
             "versionContent": [
               {
-                "title": "Request A Delivery",
-                "body": "Once you’re ready for your first delivery, all it takes is a click to get your shipment on the way.",
-                "effectiveDate": "2019-05-04T03:04:05.000Z"
+                "title": "Keep What You Like",
+                "body": "Tell us “no” by returning any unwanted products in the enclosed packaging.",
+                "effectiveDate": "2019-04-04T03:04:05.000Z"
               },
               {
-                "title": "We Deliver",
-                "body": "Once you’re ready for your first delivery, all it takes is a click to get your shipment on the way.",
-                "effectiveDate": "2019-09-04T05:04:05.000Z"
+                "title": "Keep What You Want",
+                "body": "Tell us “no thanks” by returning any unwanted products in the enclosed packaging.",
+                "effectiveDate": "2019-04-04T05:04:05.000Z"
               },
               {
-                "title": "We Deliver blah",
-                "body": "Once you’re ready for your first delivery, all it takes is a click to get your shipment on the way.",
-                "effectiveDate": "2019-02-04T05:04:05.000Z"
+                "title": "Keep Everything",
+                "body": "Tell us “no thanks” by returning any unwanted products in the enclosed packaging.",
+                "effectiveDate": "2019-02-04T08:04:05.000Z"
               }
             ]
           }
@@ -43,9 +43,9 @@ describe('fetchSteps', () => {
 
     expect(fetchSteps()).resolves.toEqual([
       {
-        "stepNumber": 2,
-        "title": "We Deliver",
-        "body": "Once you’re ready for your first delivery, all it takes is a click to get your shipment on the way."
+        "stepNumber": 3,
+        "title": "Keep What You Want",
+        "body": "Tell us “no thanks” by returning any unwanted products in the enclosed packaging."
       }
     ]);
   });
